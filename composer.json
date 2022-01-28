@@ -1,0 +1,13 @@
+{
+    "name": "xevo/caboodle",
+    "description": "WordPress Theme Boilerplate",
+    "type": "wordpress-theme",
+    "license": "GPL3.0",
+    "authors": [
+        {
+            "name": "Mitchell Holzmann",
+            "email": "mitchell@xevon.in"
+        }
+    ],
+    "require": {}
+}
