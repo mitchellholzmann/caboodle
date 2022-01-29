@@ -16,7 +16,7 @@
     "theme"
   ],
   "author": "Mitchell Holzmann <mitchell@xevon.in>",
-  "license": "GPL-3.0-or-later",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/xazinji/caboodle/issues"
   },

@@ -2,7 +2,7 @@
     "name": "xevo/caboodle",
     "description": "WordPress Theme Boilerplate",
     "type": "wordpress-theme",
-    "license": "GPL3.0",
+    "license": "MIT",
     "authors": [
         {
             "name": "Mitchell Holzmann",
