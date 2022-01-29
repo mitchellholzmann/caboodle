@@ -9,5 +9,7 @@
             "email": "mitchell@xevon.in"
         }
     ],
-    "require": {}
+    "require": {
+        "eftec/bladeone": "^4.2"
+    }
 }
