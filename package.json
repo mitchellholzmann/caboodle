@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/xazinji/caboodle#readme",
   "devDependencies": {
+    "alpinejs": "^3.8.1",
     "autoprefixer": "^10.4.2",
     "laravel-mix": "^6.0.41",
     "postcss": "^8.4.5",
