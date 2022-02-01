@@ -43,6 +43,34 @@ class Theme
     private function define_public_hooks()
     {
         $plugin_public = new Frontend($this->get_theme_name(), $this->get_version());
+
+        $templates = [
+            "index",
+            "404",
+            "archive",
+            "author",
+            "category",
+            "tag",
+            "taxonomy",
+            "date",
+            "home",
+            "frontpage",
+            "page",
+            "paged",
+            "search",
+            "single",
+            "singular",
+            "attachment",
+            "embed",
+        ];
+
+        foreach ($templates as $template) {
+            $this->loader->add_filter(
+                "{$template}_template_hierarchy",
+                $plugin_public,
+                "bladeify_templates"
+            );
+        }
     }
 
     public function run()
