@@ -10,12 +10,12 @@ class Theme
 
     public function __construct()
     {
-        if (defined('CABOODLE_VERSION')) {
+        if (defined("CABOODLE_VERSION")) {
             $this->version = CABOODLE_VERSION;
         } else {
-            $this->version = '1.0.0';
+            $this->version = "1.0.0";
         }
-        $this->theme_name = 'caboodle';
+        $this->theme_name = "caboodle";
 
         $this->loader = new Loader();
         $this->set_locale();
@@ -26,7 +26,11 @@ class Theme
     private function set_locale()
     {
         $plugin_i18n = new i18n();
-        $this->loader->add_action('plugins_loaded', $plugin_i18n, 'load_plugin_textdomain');
+        $this->loader->add_action(
+            "plugins_loaded",
+            $plugin_i18n,
+            "load_plugin_textdomain"
+        );
     }
 
     /**
@@ -34,7 +38,10 @@ class Theme
      */
     private function define_admin_hooks()
     {
-        $plugin_admin = new Backend($this->get_theme_name(), $this->get_version());
+        $plugin_admin = new Backend(
+            $this->get_theme_name(),
+            $this->get_version()
+        );
     }
 
     /**
@@ -42,7 +49,10 @@ class Theme
      */
     private function define_public_hooks()
     {
-        $plugin_public = new Frontend($this->get_theme_name(), $this->get_version());
+        $plugin_public = new Frontend(
+            $this->get_theme_name(),
+            $this->get_version()
+        );
 
         $templates = [
             "index",
