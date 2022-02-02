@@ -81,6 +81,12 @@ class Theme
                 "bladeify_templates"
             );
         }
+
+        $this->loader->add_filter(
+            "template_include",
+            $plugin_public,
+            "load_template_file"
+        );
     }
 
     public function run()

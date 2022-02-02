@@ -2,6 +2,8 @@
 
 namespace Caboodle;
 
+use eftec\bladeone\BladeOne;
+
 class Frontend
 {
     /**
@@ -46,6 +48,19 @@ class Frontend
         // wp_die(json_encode($templates));
 
         return $templates;
+    }
+
+    public function load_template_file($template)
+    {
+        if ($this->is_blade_file($template)) {
+            $views = get_template_directory() . "/resources/views";
+            $cache = get_template_directory() . "/public/cache";
+            $blade = new BladeOne($views, $cache, BladeOne::MODE_DEBUG);
+            echo $blade->run($this->remove_extension(basename($template)));
+            return get_template_directory() . "/resources/shim.php";
+        }
+
+        return $template;
     }
 
     public function remove_extension($file)
