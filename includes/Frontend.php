@@ -52,4 +52,9 @@ class Frontend
     {
         return preg_replace('#\.(blade\.?)?(php)?$#', "", ltrim($file));
     }
+
+    public function is_blade_file($file)
+    {
+        return strpos($file, ".blade.php") !== false;
+    }
 }
